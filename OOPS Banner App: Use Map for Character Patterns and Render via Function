@@ -1,0 +1,57 @@
+import java.util.HashMap;
+import java.util.Map;
+
+class CharacterRenderer {
+
+    // Map to store character patterns
+    private Map<Character, String[]> patternMap = new HashMap<>();
+
+    // Constructor to initialize patterns
+    public CharacterRenderer() {
+
+        patternMap.put('O', new String[]{
+                " *** ",
+                "*   *",
+                "*   *",
+                "*   *",
+                " *** "
+        });
+
+        patternMap.put('P', new String[]{
+                "**** ",
+                "*   *",
+                "**** ",
+                "*    ",
+                "*    "
+        });
+    }
+
+    // Function to render any word
+    public void render(String word) {
+
+        for (int row = 0; row < 5; row++) {
+
+            for (int i = 0; i < word.length(); i++) {
+
+                char ch = word.charAt(i);
+
+                if (patternMap.containsKey(ch)) {
+                    System.out.print(patternMap.get(ch)[row] + "  ");
+                } else {
+                    System.out.print("      "); // Space for unknown characters
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+public class OOPSBannerApp {
+
+    public static void main(String[] args) {
+
+        CharacterRenderer renderer = new CharacterRenderer();
+
+        renderer.render("OOPS");
+    }
+}
