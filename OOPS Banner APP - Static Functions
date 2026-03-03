@@ -1,0 +1,35 @@
+public class OOPSBannerApp {
+
+    // Static function to print O
+    static void printO() {
+        System.out.println(" *** ");
+        System.out.println("*   *");
+        System.out.println("*   *");
+        System.out.println("*   *");
+        System.out.println(" *** ");
+    }
+
+    // Static function to print P
+    static void printP() {
+        System.out.println("**** ");
+        System.out.println("*   *");
+        System.out.println("**** ");
+        System.out.println("*    ");
+        System.out.println("*    ");
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println("First O:");
+        printO();
+
+        System.out.println("\nSecond O:");
+        printO();
+
+        System.out.println("\nFirst P:");
+        printP();
+
+        System.out.println("\nSecond P:");
+        printP();
+    }
+}
